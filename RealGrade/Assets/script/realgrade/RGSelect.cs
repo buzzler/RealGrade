@@ -8,6 +8,29 @@ public class RGSelect : FageStateMachine {
 	public	GameObject groupScience;
 	public	GameObject groupSocial;
 
+	void OnEnable() {
+		if (PlayerPrefs.HasKey("subject5")) {
+			SubjectInfo info = SubjectManager.Find(PlayerPrefs.GetString("subject5"));
+			if (info.category == SubjectCategory.SCIENCE) {
+				OnClickScience();
+			} else if (info.category == SubjectCategory.SOCIETY) {
+				OnClickSocial();
+			}
+
+			Toggle[] toggles = GetComponentsInChildren<Toggle>();
+			foreach (Toggle t in toggles) {
+				t.isOn = false;
+			}
+
+			for (int i = 1 ; i <= 5 ; i++) {
+				GameObject go = GameObject.FindWithTag(PlayerPrefs.GetString("subject" + i.ToString()));
+				if (go != null) {
+					go.GetComponent<Toggle>().isOn = true;
+				}
+			}
+		}
+	}
+
 	public	void OnClickScience() {
 		groupScience.SetActive (true);
 		groupSocial.SetActive (false);

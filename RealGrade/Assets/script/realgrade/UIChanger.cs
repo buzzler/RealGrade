@@ -7,7 +7,8 @@ public	enum RGUI {
 	SELECT,
 	INPUT,
 	UPDATE,
-	RESULT
+	RESULT,
+	CHARGE
 }
 
 public class UIChanger : FageEventDispatcher {
@@ -18,6 +19,7 @@ public class UIChanger : FageEventDispatcher {
 	public	GameObject						goInput;
 	public	GameObject						goUpdate;
 	public	GameObject 						goResult;
+	public	GameObject						goCharge;
 	public	Dictionary<RGUI, GameObject>	goDictionary;
 
 	void Awake() {
@@ -27,6 +29,7 @@ public class UIChanger : FageEventDispatcher {
 		goDictionary.Add (RGUI.INPUT, goInput);
 		goDictionary.Add (RGUI.UPDATE, goUpdate);
 		goDictionary.Add (RGUI.RESULT, goResult);
+		goDictionary.Add (RGUI.CHARGE, goCharge);
 	}
 
 	void OnEnable() {

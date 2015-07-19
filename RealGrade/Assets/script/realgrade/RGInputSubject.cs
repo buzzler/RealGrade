@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -16,8 +16,8 @@ public class RGInputSubject : MonoBehaviour {
 	public	void SetSubjectInfo(SubjectInfo info) {
 		_info = info;
 		textName.text = info.name;
-		textCategory.text = info.category;
-		textCategory.transform.parent.gameObject.SetActive(!string.IsNullOrEmpty(info.category));
+		textCategory.text = info.tag;
+		textCategory.transform.parent.gameObject.SetActive(!string.IsNullOrEmpty(info.tag));
 
 		if (PlayerPrefs.HasKey (info.subject.ToString ())) {
 			_score = Mathf.Clamp (PlayerPrefs.GetInt (info.subject.ToString ()), 0, info.max);

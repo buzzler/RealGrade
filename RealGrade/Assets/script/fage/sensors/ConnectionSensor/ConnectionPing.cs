@@ -22,6 +22,10 @@ public class ConnectionPing : FageState {
 		_last_time = -_ITERATE;
 	}
 
+	public	bool IsOnline() {
+		return _online;
+	}
+
 	public override void AfterSwitch (FageStateMachine stateMachine, string beforeId) {
 		base.AfterSwitch (stateMachine, beforeId);
 		InitPing ();

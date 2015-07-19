@@ -6,6 +6,13 @@ public class RGUpdateRequest : FageState {
 
 	public override void AfterSwitch (FageStateMachine stateMachine, string beforeId) {
 		base.AfterSwitch (stateMachine, beforeId);
+
+		int coin = PlayerPrefs.GetInt("coin");
+		if (coin == 0) {
+			FageEventDispatcher.DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.CHARGE)));
+			return;
+		}
+
 		_fsm = stateMachine as RGUpdate;
 		_fsm.SetPercentage (33);
 		_fsm.SetMessage ("접속 중");
@@ -13,7 +20,9 @@ public class RGUpdateRequest : FageState {
 		FageEventDispatcher.AddEventListener (FageEvent.WEB_RESPONSE, onResponse);
 		FageEventDispatcher.AddEventListener (FageEvent.SENSOR_OFFLINE, OnOffline);
 
-		FageWebRequest request = new FageWebRequest ("RGUpdateRequest", "http://file.unityscene.com/rg/raw.txt");
+		int selected = PlayerPrefs.GetInt("selected");
+		string url = PlayerPrefs.GetString("url"+selected.ToString());
+		FageWebRequest request = new FageWebRequest ("RGUpdateRequest", url);
 		FageEventDispatcher.DispatchEvent (new FageEvent(FageEvent.WEB_REQUEST, request));
 	}
 
