@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/realgrade/RGUpdate.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/realgrade/RGSplash.cs">
     <Files>
-      <File FileName="Assets/script/realgrade/RGUpdate.cs" Line="19" Column="3" />
+      <File FileName="Assets/script/realgrade/RGSplash.cs" Line="66" Column="43" />
+      <File FileName="Assets/script/realgrade/RGUpdateRequest.cs" Line="43" Column="3" />
+      <File FileName="Assets/script/realgrade/RGUpdateParsing.cs" Line="27" Column="86" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

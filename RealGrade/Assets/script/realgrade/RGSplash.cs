@@ -48,7 +48,7 @@ public class RGSplash : FageStateMachine {
 	}
 
 	private	void Load() {
-		FageWebRequest request = new FageWebRequest(name, "http://file.unityscene.com/rg/meta.txt");
+		FageWebRequest request = new FageWebRequest(name, "http://bbulgithub.cafe24.com/ref");
 		AddEventListener(FageEvent.WEB_RESPONSE, OnResponse);
 		DispatchEvent(new FageEvent(FageEvent.WEB_REQUEST, request));
 	}
