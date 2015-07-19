@@ -1,22 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="script" expanded="True">
-              <Node name="fage" expanded="True">
-                <Node name="events" expanded="True" />
-              </Node>
-              <Node name="realgrade" expanded="True">
-                <Node name="RGCharge.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/realgrade/RGUpdate.cs">
+    <Files>
+      <File FileName="Assets/script/realgrade/RGUpdate.cs" Line="19" Column="3" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

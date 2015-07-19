@@ -20,6 +20,10 @@ public class RGResult : FageEventDispatcher {
 	void Update() {
 		int coin = PlayerPrefs.GetInt("coin");
 		textCoin.text = coin.ToString();
+
+		if (Input.GetKey (KeyCode.Escape)) {
+			OnClickRetry();
+		}
 	}
 
 	void OnDisable() {

@@ -8,6 +8,12 @@ public class RGSelect : FageStateMachine {
 	public	GameObject groupScience;
 	public	GameObject groupSocial;
 
+	void Update() {
+		if (Input.GetKey (KeyCode.Escape)) {
+			Application.Quit();
+		}
+	}
+
 	void OnEnable() {
 		if (PlayerPrefs.HasKey("subject5")) {
 			SubjectInfo info = SubjectManager.Find(PlayerPrefs.GetString("subject5"));

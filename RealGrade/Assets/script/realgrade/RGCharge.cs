@@ -3,6 +3,13 @@ using UnityEngine.Advertisements;
 using System.Collections;
 
 public class RGCharge : FageStateMachine {
+
+	void Update() {
+		if (Input.GetKey (KeyCode.Escape)) {
+			DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT)));
+		}
+	}
+
 	public	void OnClickShow() {
 		ShowOptions op = new ShowOptions();
 		op.resultCallback = OnAds;

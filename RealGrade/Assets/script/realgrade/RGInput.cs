@@ -13,6 +13,12 @@ public class RGInput : FageStateMachine {
 		}
 	}
 
+	void Update() {
+		if (Input.GetKey (KeyCode.Escape)) {
+			OnClickPrev();
+		}
+	}
+
 	void OnDisable() {
 
 	}
