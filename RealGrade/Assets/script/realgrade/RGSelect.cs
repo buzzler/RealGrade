@@ -4,9 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RGSelect : FageStateMachine {
-	public	GameObject groupEssence;
-	public	GameObject groupScience;
-	public	GameObject groupSocial;
+	public	GameObject	groupEssence;
+	public	GameObject	groupScience;
+	public	GameObject	groupSocial;
+	public	Text		textError;
 
 	void Update() {
 		if (Input.GetKey (KeyCode.Escape)) {
@@ -62,18 +63,8 @@ public class RGSelect : FageStateMachine {
 			}
 		}
 
-		if (count >= 2) {
-			foreach (Toggle toggle in toggles) {
-				if (!toggle.isOn) {
-					toggle.interactable = false;
-				}
-			}
-		} else {
-			foreach (Toggle toggle in toggles) {
-				if (!toggle.isOn) {
-					toggle.interactable = true;
-				}
-			}
+		if (count == 2) {
+			textError.gameObject.SetActive(false);
 		}
 	}
 
@@ -107,6 +98,7 @@ public class RGSelect : FageStateMachine {
 		}
 
 		if (selected.Count != 4) {
+			textError.gameObject.SetActive(true);
 			return;
 		}
 
