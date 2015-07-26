@@ -7,5 +7,6 @@ public class RGUpdateDone : FageState {
 		int coin = PlayerPrefs.GetInt("coin");
 		PlayerPrefs.SetInt("coin", coin-1);
 		FageEventDispatcher.DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.RESULT)));
+		FageAnalytics.LogCoinEvent(FageAnalytics.ACTION_SPEND, 1);
 	}
 }

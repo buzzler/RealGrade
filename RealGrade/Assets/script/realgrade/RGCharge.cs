@@ -14,17 +14,24 @@ public class RGCharge : FageStateMachine {
 		ShowOptions op = new ShowOptions();
 		op.resultCallback = OnAds;
 		Advertisement.Show(null, op);
+		FageAnalytics.LogAdEvent(FageAnalytics.ACTION_SHOW, PlayerPrefs.GetInt("coin"));
 	}
 
 	void OnAds (ShowResult result) {
+		int coin = PlayerPrefs.GetInt("coin");
 		switch(result) {
 		case ShowResult.Finished:
-			int coin = PlayerPrefs.GetInt("coin");
-			PlayerPrefs.SetInt("coin", Mathf.Min(coin+3, 999));
+			coin = Mathf.Min(coin+3, 999);
+			PlayerPrefs.SetInt("coin", coin);
 			DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.UPDATE)));
+			FageAnalytics.LogAdEvent(FageAnalytics.ACTION_DONE, coin);
+			FageAnalytics.LogCoinEvent(FageAnalytics.ACTION_GET, 3);
 			break;
 		case ShowResult.Skipped:
+			FageAnalytics.LogAdEvent(FageAnalytics.ACTION_SKIP, coin);
+			break;
 		case ShowResult.Failed:
+			FageAnalytics.LogAdEvent(FageAnalytics.ACTION_FAIL, coin);
 			break;
 		}
 	}

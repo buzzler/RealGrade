@@ -7,6 +7,8 @@ Project("{0C970436-45CC-0A56-9BFD-847D9857A42D}") = "RealGrade", "Assembly-CShar
 EndProject
 Project("{0C970436-45CC-0A56-9BFD-847D9857A42D}") = "RealGrade", "Assembly-CSharp-Editor-firstpass.csproj", "{9699F8CD-290D-2F69-FFF7-1FAC2081853E}"
 EndProject
+Project("{0C970436-45CC-0A56-9BFD-847D9857A42D}") = "RealGrade", "Assembly-UnityScript-Editor-firstpass.unityproj", "{B51FCBE4-6573-65D4-A496-BB0BDA40AD89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,15 @@ Global
 		{9699F8CD-290D-2F69-FFF7-1FAC2081853E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9699F8CD-290D-2F69-FFF7-1FAC2081853E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9699F8CD-290D-2F69-FFF7-1FAC2081853E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B51FCBE4-6573-65D4-A496-BB0BDA40AD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B51FCBE4-6573-65D4-A496-BB0BDA40AD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B51FCBE4-6573-65D4-A496-BB0BDA40AD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B51FCBE4-6573-65D4-A496-BB0BDA40AD89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																										GlobalSection(MonoDevelopProperties) = preSolution
+																																																				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

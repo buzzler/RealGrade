@@ -71,7 +71,11 @@ public class RGSplash : FageStateMachine {
 
 		int selected = PlayerPrefs.GetInt("selected");
 		textComplete.text = PlayerPrefs.GetString("title"+selected.ToString());
+#if UNITY_EDITOR || UNITY_ANDROID
 		Advertisement.Initialize("56128");
+#elif UNITY_IOS
+		Advertisement.Initialize("57590");
+#endif
 		Invoke("OnClickNext", 2f);
 	}
 

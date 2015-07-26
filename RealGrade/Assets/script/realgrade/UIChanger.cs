@@ -45,6 +45,7 @@ public class UIChanger : FageEventDispatcher {
 		foreach (RGUI key in goDictionary.Keys) {
 			goDictionary[key].SetActive(key == request.target);
 		}
+		FageAnalytics.LogScreen(request.target);
 	}
 }
 

@@ -24,6 +24,15 @@ public class RGUpdateRequest : FageState {
 		string url = PlayerPrefs.GetString("url"+selected.ToString());
 		FageWebRequest request = new FageWebRequest ("RGUpdateRequest", url);
 		FageEventDispatcher.DispatchEvent (new FageEvent(FageEvent.WEB_REQUEST, request));
+
+		// for analytics
+		FageAnalytics.LogClassEvent(3);
+		for (int i = 1 ; i < 5 ; i++) {
+			string code = PlayerPrefs.GetString("subject" + i.ToString());
+			SubjectInfo info = SubjectManager.Find(code);
+			int score = PlayerPrefs.GetInt(code);
+			FageAnalytics.LogSubjectScoreEvent(info.name, score);
+		}
 	}
 
 	public override void BeforeSwitch (FageStateMachine stateMachine, string afterId) {

@@ -1,10 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/realgrade/RGSelect.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/realgrade/RGUpdateRequest.cs">
     <Files>
-      <File FileName="Assets/script/realgrade/RGSelect.cs" Line="22" Column="20" />
-      <File FileName="Assets/script/realgrade/SubjectManager.cs" Line="40" Column="1" />
+      <File FileName="Assets/script/realgrade/RGSplash.cs" Line="75" Column="3" />
+      <File FileName="Assets/script/fage/net/FageAnalytics.cs" Line="48" Column="15" />
+      <File FileName="Assets/script/realgrade/RGUpdateRequest.cs" Line="34" Column="57" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="script" expanded="True">
+              <Node name="fage" expanded="True">
+                <Node name="net" expanded="True" />
+              </Node>
+              <Node name="realgrade" expanded="True">
+                <Node name="RGUpdateRequest.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

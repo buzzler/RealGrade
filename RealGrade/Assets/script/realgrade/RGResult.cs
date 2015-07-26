@@ -37,6 +37,7 @@ public class RGResult : FageEventDispatcher {
 		ShowOptions op = new ShowOptions();
 		op.resultCallback = OnAds;
 		Advertisement.Show(null, op);
+		FageAnalytics.LogAdEvent(FageAnalytics.ACTION_SHOW, PlayerPrefs.GetInt("coin"));
 	}
 
 	public	void OnClickRefresh() {
@@ -49,13 +50,19 @@ public class RGResult : FageEventDispatcher {
 	}
 
 	void OnAds (ShowResult result) {
+		int coin = PlayerPrefs.GetInt("coin");
 		switch(result) {
 		case ShowResult.Finished:
-			int coin = PlayerPrefs.GetInt("coin");
-			PlayerPrefs.SetInt("coin", Mathf.Min(coin+3,999));
+			coin = Mathf.Min(coin+3,999);
+			PlayerPrefs.SetInt("coin", coin);
+			FageAnalytics.LogAdEvent(FageAnalytics.ACTION_DONE, coin);
+			FageAnalytics.LogCoinEvent(FageAnalytics.ACTION_GET, 3);
 			break;
 		case ShowResult.Skipped:
+			FageAnalytics.LogAdEvent(FageAnalytics.ACTION_SKIP, coin);
+			break;
 		case ShowResult.Failed:
+			FageAnalytics.LogAdEvent(FageAnalytics.ACTION_FAIL, coin);
 			break;
 		}
 	}
