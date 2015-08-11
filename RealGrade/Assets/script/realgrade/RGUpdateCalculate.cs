@@ -20,7 +20,15 @@ public class RGUpdateCalculate : FageState {
 		base.Excute (stateMachine);
 		RGUpdate fsm = stateMachine as RGUpdate;
 		if (_calculated != true) {
-			for (int i = 1; i <= 5; i++) {
+			int total = 0;
+			for (int i = 1 ; i <= 20 ; i++) {
+				if (!PlayerPrefs.HasKey("subject"+i.ToString())) {
+					total = i - 1;
+					break;
+				}
+			}
+
+			for (int i = 1; i <= total; i++) {
 				string code = PlayerPrefs.GetString ("subject" + i.ToString ());
 				int score = PlayerPrefs.GetInt (code);
 				SubjectInfo info = SubjectManager.Find (code);

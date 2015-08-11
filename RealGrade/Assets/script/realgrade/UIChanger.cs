@@ -5,6 +5,9 @@ public	enum RGUI {
 	NONE = 0,
 	SPLASH,
 	SELECT,
+	SELECT1,
+	SELECT2,
+	SELECT3,
 	INPUT,
 	UPDATE,
 	RESULT,
@@ -16,6 +19,9 @@ public class UIChanger : FageEventDispatcher {
 
 	public	GameObject						goSplash;
 	public	GameObject						goSelect;
+	public	GameObject						goSelect1;
+	public	GameObject						goSelect2;
+	public	GameObject						goSelect3;
 	public	GameObject						goInput;
 	public	GameObject						goUpdate;
 	public	GameObject 						goResult;
@@ -26,6 +32,9 @@ public class UIChanger : FageEventDispatcher {
 		goDictionary = new Dictionary<RGUI, GameObject> ();
 		goDictionary.Add (RGUI.SPLASH, goSplash);
 		goDictionary.Add (RGUI.SELECT, goSelect);
+		goDictionary.Add (RGUI.SELECT1, goSelect1);
+		goDictionary.Add (RGUI.SELECT2, goSelect2);
+		goDictionary.Add (RGUI.SELECT3, goSelect3);
 		goDictionary.Add (RGUI.INPUT, goInput);
 		goDictionary.Add (RGUI.UPDATE, goUpdate);
 		goDictionary.Add (RGUI.RESULT, goResult);

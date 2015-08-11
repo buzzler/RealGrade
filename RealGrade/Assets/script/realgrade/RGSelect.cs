@@ -4,68 +4,104 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RGSelect : FageStateMachine {
+	public	GameObject	groupHidden;
 	public	GameObject	groupEssence;
 	public	GameObject	groupScience;
 	public	GameObject	groupSocial;
 	public	Text		textError;
+	public	int			required;
 
 	void Update() {
 		if (Input.GetKey (KeyCode.Escape)) {
-			Application.Quit();
+			OnClickPrev();
 		}
 	}
 
 	void OnEnable() {
-		if (PlayerPrefs.HasKey("subject5")) {
-			SubjectInfo info = SubjectManager.Find(PlayerPrefs.GetString("subject5"));
-			if (info.category == SubjectCategory.SCIENCE) {
-				OnClickScience();
-			} else if (info.category == SubjectCategory.SOCIETY) {
-				OnClickSocial();
+		if (PlayerPrefs.HasKey("subject1")) {
+			if (PlayerPrefs.HasKey("category")) {
+				int c = PlayerPrefs.GetInt("category");
+				if (c == 1) {
+					OnClickScience();
+				} else if (c == 2) {
+					OnClickSocial();
+				}
 			}
 
-			Toggle[] toggles = GetComponentsInChildren<Toggle>();
+			Toggle[] toggles = groupEssence.GetComponentsInChildren<Toggle>();
+			foreach (Toggle t in toggles) {
+				t.isOn = false;
+			}
+			toggles = groupScience.GetComponentsInChildren<Toggle>();
+			foreach (Toggle t in toggles) {
+				t.isOn = false;
+			}
+			toggles = groupSocial.GetComponentsInChildren<Toggle>();
 			foreach (Toggle t in toggles) {
 				t.isOn = false;
 			}
 
-			for (int i = 1 ; i <= 5 ; i++) {
-				GameObject go = GameObject.FindWithTag(PlayerPrefs.GetString("subject" + i.ToString()));
-				if (go != null) {
-					go.GetComponent<Toggle>().isOn = true;
+			for (int i = 1 ; i <= required ; i++) {
+				string str = "subject" + i.ToString();
+				if (PlayerPrefs.HasKey(str)) {
+					string code = PlayerPrefs.GetString(str);
+					GameObject go = GameObject.FindWithTag(code);
+					if (go != null) {
+						go.GetComponent<Toggle>().isOn = true;
+					}
 				}
 			}
 		}
 	}
 
 	public	void OnClickScience() {
+		PlayerPrefs.SetInt("category", 1);
 		groupScience.SetActive (true);
 		groupSocial.SetActive (false);
 	}
 
 	public	void OnClickSocial() {
+		PlayerPrefs.SetInt("category", 2);
 		groupScience.SetActive (false);
 		groupSocial.SetActive (true);
 	}
 
 	public	void OnToggle() {
+		int count = 0;
 		Toggle[] toggles;
+
 		if (groupScience.activeSelf) {
 			toggles = groupScience.GetComponentsInChildren<Toggle>();
 		} else {
 			toggles = groupSocial.GetComponentsInChildren<Toggle>();
 		}
-
-		int count = 0;
 		foreach (Toggle toggle in toggles) {
 			if (toggle.isOn) {
 				count++;
 			}
 		}
 
-		if (count == 2) {
+		toggles = groupHidden.GetComponentsInChildren<Toggle>();
+		foreach (Toggle toggle in toggles) {
+			if (toggle.isOn) {
+				count++;
+			}
+		}
+
+		toggles = groupEssence.GetComponentsInChildren<Toggle>();
+		foreach (Toggle toggle in toggles) {
+			if (toggle.isOn) {
+				count++;
+			}
+		}
+
+		if (count == required) {
 			textError.gameObject.SetActive(false);
 		}
+	}
+
+	public	void OnClickPrev() {
+		DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT)));
 	}
 
 	public	void OnClickNext() {
@@ -81,8 +117,14 @@ public class RGSelect : FageStateMachine {
 			}
 		}
 
-		PlayerPrefs.SetString ("subject" + i.ToString(), SubjectCode.ENG.ToString ());
-		i++;
+		toggles = groupHidden.GetComponentsInChildren<Toggle> ();
+		foreach (Toggle toggle in toggles) {
+			if (toggle.isOn) {
+				selected.Add(toggle);
+				PlayerPrefs.SetString("subject" + i.ToString(), toggle.gameObject.name);
+				i++;
+			}
+		}
 
 		if (groupScience.activeSelf) {
 			toggles = groupScience.GetComponentsInChildren<Toggle> ();
@@ -97,7 +139,12 @@ public class RGSelect : FageStateMachine {
 			}
 		}
 
-		if (selected.Count != 4) {
+		string str = "subject"+i.ToString();
+		if (PlayerPrefs.HasKey(str)) {
+			PlayerPrefs.DeleteKey(str);
+		}
+
+		if (selected.Count != required) {
 			textError.gameObject.SetActive(true);
 			return;
 		}

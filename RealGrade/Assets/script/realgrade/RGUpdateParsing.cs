@@ -24,10 +24,14 @@ public class RGUpdateParsing : FageState {
 			return;
 		}
 
+		int selected = PlayerPrefs.GetInt("selected");
+		int total = GodRoot.instance.subjectGroups[selected-1].GetSubjectCount();
+
 		string[] lines = _raw.Replace ("\r\n", "\n").Replace ("\r", "\n").Split ("\n" [0]);
-		for (int i = 0 ; i < 23 ; i++) {
+		for (int i = 0 ; i < total ; i++) {
 			string code = lines[i*9];
 			SubjectInfo info = SubjectManager.Find(code);
+			Debug.Log(code);
 			for (int j = 1 ; j <= 8 ; j++) {
 				info.SetData(lines[i*9+j]);
 			}

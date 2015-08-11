@@ -1,20 +1,26 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Xml;
+using System.IO;
 using UnityEngine.Advertisements;
 
 public class RGSplash : FageStateMachine {
 	public	Image		imageLoading;
 	public	Text		textComplete;
+	public	Text		textNotice;
 	public	GameObject	groupLoading;
 	public	GameObject	groupRetry;
 	public	GameObject	groupComplete;
+	public	GameObject	groupNotice;
+	public	float		timeNotice;
+	public	int			indexNotice;
 
 	void Awake () {
 		if (!PlayerPrefs.HasKey("coin")) {
 			PlayerPrefs.SetInt("coin", 4);
 		}
-		Invoke("OnClickRetry", 1f);
+//		Invoke("OnClickRetry", 1f);
 	}
 
 	void OnEnable() {
@@ -23,6 +29,7 @@ public class RGSplash : FageStateMachine {
 	}
 
 	void OnDisable() {
+		CancelInvoke();
 		RemoveEventListener(FageEvent.SENSOR_ONLINE, OnOnline);
 		RemoveEventListener(FageEvent.SENSOR_OFFLINE, OnOffline);
 	}
@@ -48,7 +55,7 @@ public class RGSplash : FageStateMachine {
 	}
 
 	private	void Load() {
-		FageWebRequest request = new FageWebRequest(name, "http://bbulgithub.cafe24.com/ref");
+		FageWebRequest request = new FageWebRequest(name, "http://bbulgithub.cafe24.com/class.xml");
 		AddEventListener(FageEvent.WEB_RESPONSE, OnResponse);
 		DispatchEvent(new FageEvent(FageEvent.WEB_REQUEST, request));
 	}
@@ -58,7 +65,7 @@ public class RGSplash : FageStateMachine {
 		groupLoading.SetActive(false);
 		groupRetry.SetActive(false);
 		groupComplete.SetActive(true);
-
+/*
 		FageWebResponse response = fevent.data as FageWebResponse;
 		string[] lines = response.www.text.Replace("\r\n", "\n").Replace("\r", "\n").Split("\n"[0]);
 
@@ -71,12 +78,24 @@ public class RGSplash : FageStateMachine {
 
 		int selected = PlayerPrefs.GetInt("selected");
 		textComplete.text = PlayerPrefs.GetString("title"+selected.ToString());
+*/
 #if UNITY_EDITOR || UNITY_ANDROID
 		Advertisement.Initialize("56128");
 #elif UNITY_IOS
 		Advertisement.Initialize("57590");
 #endif
-		Invoke("OnClickNext", 2f);
+
+		FageWebResponse response = fevent.data as FageWebResponse;
+		GodRoot root = new GodRoot(response.www.text);
+		if (root.notifies.Length > 0) {
+			for (int i = 0 ; i < 3 ; i++) {
+				PlayerPrefs.SetString("url"+(i+1).ToString(), root.subjectGroups[i].url);
+			}
+
+			groupNotice.SetActive(true);
+			indexNotice = 0;
+			OnNotice();
+		}
 	}
 
 	public	void OnClickRetry() {
@@ -94,6 +113,11 @@ public class RGSplash : FageStateMachine {
 
 	public	void OnClickNext() {
 		DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT)));
-		CancelInvoke("OnClickNext");
+	}
+
+	public	void OnNotice() {
+		textNotice.text = GodRoot.instance.notifies[indexNotice].message;
+		indexNotice = (indexNotice+1) % GodRoot.instance.notifies.Length;
+		Invoke("OnNotice", timeNotice);
 	}
 }

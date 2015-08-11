@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Advertisements;
 using System.Collections;
 
@@ -6,7 +6,14 @@ public class RGCharge : FageStateMachine {
 
 	void Update() {
 		if (Input.GetKey (KeyCode.Escape)) {
-			DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT)));
+			switch (PlayerPrefs.GetInt("selected")) {
+			case 1:
+				DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT1))); break;
+			case 2:
+				DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT2))); break;
+			case 3:
+				DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT3))); break;
+			}
 		}
 	}
 
