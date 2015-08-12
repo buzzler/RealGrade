@@ -8,8 +8,9 @@ public class RGInput : FageStateMachine {
 
 	void OnEnable() {
 		int total = 0;
+		int selectedClass = PlayerPrefs.GetInt("selected");
 		for (int i = 1 ; i <= 20 ; i++) {
-			if (!PlayerPrefs.HasKey("subject"+i.ToString())) {
+			if (!PlayerPrefs.HasKey(selectedClass.ToString()+"subject"+i.ToString())) {
 				total = i - 1;
 				break;
 			}
@@ -21,7 +22,7 @@ public class RGInput : FageStateMachine {
 			item.transform.SetParent(grid, false);
 			subjects[i-1] = item;
 
-			string code = PlayerPrefs.GetString("subject"+i.ToString());
+			string code = PlayerPrefs.GetString(selectedClass.ToString()+"subject"+i.ToString());
 			SubjectInfo info = SubjectManager.Find(code);
 			item.SetSubjectInfo(info);
 		}

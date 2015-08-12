@@ -13,8 +13,9 @@ public class RGResult : FageEventDispatcher {
 
 	void OnEnable() {
 		int total = 0;
+		int selectedClass = PlayerPrefs.GetInt("selected");
 		for (int i = 1 ; i <= 20 ; i++) {
-			if (!PlayerPrefs.HasKey("subject"+i.ToString())) {
+			if (!PlayerPrefs.HasKey(selectedClass.ToString()+"subject"+i.ToString())) {
 				total = i - 1;
 				break;
 			}
@@ -26,16 +27,11 @@ public class RGResult : FageEventDispatcher {
 			item.transform.SetParent(grid, false);
 			subjects[i-1] = item;
 			
-			string code = PlayerPrefs.GetString("subject"+i.ToString());
+			string code = PlayerPrefs.GetString(selectedClass.ToString()+"subject"+i.ToString());
 			SubjectInfo info = SubjectManager.Find(code);
 			item.SetData (info, PlayerPrefs.GetInt ("grade" + i.ToString ()), colorFirst, colorOther);
 		}
 
-//		for (int i = 1; i <= 5; i++) {
-//			string code = PlayerPrefs.GetString ("subject" + i.ToString ());
-//			SubjectInfo info = SubjectManager.Find (code);
-//			subjects [i - 1].SetData (info, PlayerPrefs.GetInt ("grade" + i.ToString ()), colorFirst, colorOther);
-//		}
 	}
 
 	void Update() {
@@ -56,14 +52,7 @@ public class RGResult : FageEventDispatcher {
 	}
 
 	public	void OnClickRetry() {
-		switch (PlayerPrefs.GetInt("selected")) {
-		case 1:
-			DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT1))); break;
-		case 2:
-			DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT2))); break;
-		case 3:
-			DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.SELECT3))); break;
-		}
+		DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.INPUT)));
 	}
 
 	public	void OnClickAd() {

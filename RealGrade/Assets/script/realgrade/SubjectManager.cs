@@ -7,46 +7,60 @@ public class SubjectManager : FageEventDispatcher {
 
 	void Awake() {
 		_dictiopnary = new Dictionary<string, SubjectInfo> ();
-		_dictiopnary.Add (SubjectCode.KOR.ToString (), new SubjectInfo(SubjectCode.KOR,		"국어", "", 1, 100));
-		_dictiopnary.Add (SubjectCode.KOR_A.ToString (), new SubjectInfo(SubjectCode.KOR_A,	"국어", "A", 2, 100));
-		_dictiopnary.Add (SubjectCode.KOR_B.ToString (), new SubjectInfo(SubjectCode.KOR_B,	"국어", "B", 3, 100));
+		_dictiopnary.Add (SubjectCode.C_KOR_A.ToString (), new SubjectInfo(SubjectCode.C_KOR_A,		"국어", "A", 1, 100));
+		_dictiopnary.Add (SubjectCode.C_KOR_B.ToString (), new SubjectInfo(SubjectCode.C_KOR_B,		"국어", "B", 2, 100));
+		_dictiopnary.Add (SubjectCode.C_MAT_A.ToString (), new SubjectInfo(SubjectCode.C_MAT_A,		"수학", "A", 3, 100));
+		_dictiopnary.Add (SubjectCode.C_MAT_B.ToString (), new SubjectInfo(SubjectCode.C_MAT_B,		"수학", "B", 4, 100));
+		_dictiopnary.Add (SubjectCode.C_ENG.ToString (), new SubjectInfo(SubjectCode.C_ENG,			"영어", "", 5, 100));
+		_dictiopnary.Add (SubjectCode.C_PHY_I.ToString (), new SubjectInfo(SubjectCode.C_PHY_I,		"물리", "I", 6, 50));
+		_dictiopnary.Add (SubjectCode.C_PHY_II.ToString (), new SubjectInfo(SubjectCode.C_PHY_II,	"물리", "II", 7, 50));
+		_dictiopnary.Add (SubjectCode.C_CHM_I.ToString (), new SubjectInfo(SubjectCode.C_CHM_I,		"화학", "I", 8, 50));
+		_dictiopnary.Add (SubjectCode.C_CHM_II.ToString (), new SubjectInfo(SubjectCode.C_CHM_II,	"화학", "II", 9, 50));
+		_dictiopnary.Add (SubjectCode.C_BIO_I.ToString (), new SubjectInfo(SubjectCode.C_BIO_I,		"생명과학", "I", 10, 50));
+		_dictiopnary.Add (SubjectCode.C_BIO_II.ToString (), new SubjectInfo(SubjectCode.C_BIO_II,	"생명과학", "II", 11, 50));
+		_dictiopnary.Add (SubjectCode.C_GEO_I.ToString (), new SubjectInfo(SubjectCode.C_GEO_I,		"지구과학", "I", 12, 50));
+		_dictiopnary.Add (SubjectCode.C_GEO_II.ToString (), new SubjectInfo(SubjectCode.C_GEO_II,	"지구과학", "II", 13, 50));
+		_dictiopnary.Add (SubjectCode.C_CUL.ToString (), new SubjectInfo(SubjectCode.C_CUL,			"사회문화", "", 14, 50));
+		_dictiopnary.Add (SubjectCode.C_LIF.ToString (), new SubjectInfo(SubjectCode.C_LIF,			"생활과 윤리", "", 15, 50));
+		_dictiopnary.Add (SubjectCode.C_MAP_K.ToString (), new SubjectInfo(SubjectCode.C_MAP_K,		"한국지리", "", 16, 50));
+		_dictiopnary.Add (SubjectCode.C_REL.ToString (), new SubjectInfo(SubjectCode.C_REL,			"윤리와 사상", "", 17, 50));
+		_dictiopnary.Add (SubjectCode.C_HIS_K.ToString (), new SubjectInfo(SubjectCode.C_HIS_K,		"한국사", "", 18, 50));
+		_dictiopnary.Add (SubjectCode.C_MAP_W.ToString (), new SubjectInfo(SubjectCode.C_MAP_W,		"세계지리", "", 19, 50));
+		_dictiopnary.Add (SubjectCode.C_HIS_A.ToString (), new SubjectInfo(SubjectCode.C_HIS_A,		"동아시아사", "", 20, 50));
+		_dictiopnary.Add (SubjectCode.C_LAW.ToString (), new SubjectInfo(SubjectCode.C_LAW,			"법과정치", "", 21, 50));
+		_dictiopnary.Add (SubjectCode.C_HIS_W.ToString (), new SubjectInfo(SubjectCode.C_HIS_W,		"세계사", "", 22, 50));
+		_dictiopnary.Add (SubjectCode.C_ECO.ToString (), new SubjectInfo(SubjectCode.C_ECO,			"경제", "", 23, 50));
 
-		_dictiopnary.Add (SubjectCode.MAT.ToString (), new SubjectInfo(SubjectCode.MAT,		"수학", "", 4, 100));
-		_dictiopnary.Add (SubjectCode.MAT_A.ToString (), new SubjectInfo(SubjectCode.MAT_A,	"수학", "A", 4, 100));
-		_dictiopnary.Add (SubjectCode.MAT_B.ToString (), new SubjectInfo(SubjectCode.MAT_B,	"수학", "B", 5, 100));
-		_dictiopnary.Add (SubjectCode.MAT_X.ToString (), new SubjectInfo(SubjectCode.MAT_X,	"수학", "가", 6, 100));
-		_dictiopnary.Add (SubjectCode.MAT_Y.ToString (), new SubjectInfo(SubjectCode.MAT_Y,	"수학", "나", 7, 100));
-		_dictiopnary.Add (SubjectCode.ENG.ToString (), new SubjectInfo(SubjectCode.ENG,		"영어", "", 8, 100));
+		_dictiopnary.Add (SubjectCode.B_KOR.ToString (), new SubjectInfo(SubjectCode.B_KOR,		"국어", "", 1, 100));
+		_dictiopnary.Add (SubjectCode.B_MAT_X.ToString (), new SubjectInfo(SubjectCode.B_MAT_X,	"수학", "가", 2, 100));
+		_dictiopnary.Add (SubjectCode.B_MAT_Y.ToString (), new SubjectInfo(SubjectCode.B_MAT_Y,	"수학", "나", 3, 100));
+		_dictiopnary.Add (SubjectCode.B_ENG.ToString (), new SubjectInfo(SubjectCode.B_ENG,		"영어", "", 4, 100));
+		_dictiopnary.Add (SubjectCode.B_HIS_K.ToString (), new SubjectInfo(SubjectCode.B_HIS_K,	"한국사", "", 5, 50));
+		_dictiopnary.Add (SubjectCode.B_PHY_I.ToString (), new SubjectInfo(SubjectCode.B_PHY_I,	"물리", "I", 6, 50));
+		_dictiopnary.Add (SubjectCode.B_CHM_I.ToString (), new SubjectInfo(SubjectCode.B_CHM_I,	"화학", "I", 7, 50));
+		_dictiopnary.Add (SubjectCode.B_BIO_I.ToString (), new SubjectInfo(SubjectCode.B_BIO_I,	"생명과학", "I", 8, 50));
+		_dictiopnary.Add (SubjectCode.B_GEO_I.ToString (), new SubjectInfo(SubjectCode.B_GEO_I,	"지구과학", "I", 9, 50));
+		_dictiopnary.Add (SubjectCode.B_CUL.ToString (), new SubjectInfo(SubjectCode.B_CUL,		"사회문화", "", 10, 50));
+		_dictiopnary.Add (SubjectCode.B_LIF.ToString (), new SubjectInfo(SubjectCode.B_LIF,		"생활과 윤리", "", 11, 50));
+		_dictiopnary.Add (SubjectCode.B_MAP_K.ToString (), new SubjectInfo(SubjectCode.B_MAP_K,	"한국지리", "", 12, 50));
+		_dictiopnary.Add (SubjectCode.B_REL.ToString (), new SubjectInfo(SubjectCode.B_REL,		"윤리와 사상", "", 13, 50));
+		_dictiopnary.Add (SubjectCode.B_MAP_W.ToString (), new SubjectInfo(SubjectCode.B_MAP_W,	"세계지리", "", 14, 50));
+		_dictiopnary.Add (SubjectCode.B_HIS_A.ToString (), new SubjectInfo(SubjectCode.B_HIS_A,	"동아시아사", "", 15, 50));
+		_dictiopnary.Add (SubjectCode.B_LAW.ToString (), new SubjectInfo(SubjectCode.B_LAW,		"법과정치", "", 16, 50));
+		_dictiopnary.Add (SubjectCode.B_HIS_W.ToString (), new SubjectInfo(SubjectCode.B_HIS_W,	"세계사", "", 17, 50));
+		_dictiopnary.Add (SubjectCode.B_ECO.ToString (), new SubjectInfo(SubjectCode.B_ECO,		"경제", "", 18, 50));
 
-		_dictiopnary.Add (SubjectCode.PHY.ToString (), new SubjectInfo(SubjectCode.PHY,		"물리", "", 9, 50));
-		_dictiopnary.Add (SubjectCode.PHY_I.ToString (), new SubjectInfo(SubjectCode.PHY_I,	"물리", "I", 10, 50));
-		_dictiopnary.Add (SubjectCode.PHY_II.ToString (), new SubjectInfo(SubjectCode.PHY_II,"물리", "II", 11, 50));
-
-		_dictiopnary.Add (SubjectCode.CHM.ToString (), new SubjectInfo(SubjectCode.CHM,		"화학", "", 12, 50));
-		_dictiopnary.Add (SubjectCode.CHM_I.ToString (), new SubjectInfo(SubjectCode.CHM_I,	"화학", "I", 13, 50));
-		_dictiopnary.Add (SubjectCode.CHM_II.ToString (), new SubjectInfo(SubjectCode.CHM_II,"화학", "II", 14, 50));
-
-		_dictiopnary.Add (SubjectCode.BIO.ToString (), new SubjectInfo(SubjectCode.BIO,		"생명과학", "", 15, 50));
-		_dictiopnary.Add (SubjectCode.BIO_I.ToString (), new SubjectInfo(SubjectCode.BIO_I,	"생명과학", "I", 16, 50));
-		_dictiopnary.Add (SubjectCode.BIO_II.ToString (), new SubjectInfo(SubjectCode.BIO_II,"생명과학", "II", 17, 50));
-
-		_dictiopnary.Add (SubjectCode.GEO.ToString (), new SubjectInfo(SubjectCode.GEO,		"지구과학", "", 18, 50));
-		_dictiopnary.Add (SubjectCode.GEO_I.ToString (), new SubjectInfo(SubjectCode.GEO_I,	"지구과학", "I", 19, 50));
-		_dictiopnary.Add (SubjectCode.GEO_II.ToString (), new SubjectInfo(SubjectCode.GEO_II,"지구과학", "II", 20, 50));
-
-		_dictiopnary.Add (SubjectCode.NOR.ToString (), new SubjectInfo(SubjectCode.NOR,		"일반사회", "", 21, 50));
-		_dictiopnary.Add (SubjectCode.CUL.ToString (), new SubjectInfo(SubjectCode.CUL,		"사회문화", "", 22, 50));
-		_dictiopnary.Add (SubjectCode.LIF.ToString (), new SubjectInfo(SubjectCode.LIF,		"생활과 윤리", "", 23, 50));
-		_dictiopnary.Add (SubjectCode.MAP.ToString (), new SubjectInfo(SubjectCode.MAP,		"지리", "", 24, 50));
-		_dictiopnary.Add (SubjectCode.MAP_K.ToString (), new SubjectInfo(SubjectCode.MAP_K,	"한국지리", "", 25, 50));
-		_dictiopnary.Add (SubjectCode.REL.ToString (), new SubjectInfo(SubjectCode.REL,		"윤리와 사상", "", 26, 50));
-		_dictiopnary.Add (SubjectCode.HIS_K.ToString (), new SubjectInfo(SubjectCode.HIS_K,	"한국사", "", 27, 50));
-
-		_dictiopnary.Add (SubjectCode.MAP_W.ToString (), new SubjectInfo(SubjectCode.MAP_W,	"세계지리", "", 28, 50));
-		_dictiopnary.Add (SubjectCode.HIS_A.ToString (), new SubjectInfo(SubjectCode.HIS_A,	"동아시아사", "", 29, 50));
-		_dictiopnary.Add (SubjectCode.LAW.ToString (), new SubjectInfo(SubjectCode.LAW,		"법과정치", "", 30, 50));
-		_dictiopnary.Add (SubjectCode.HIS_W.ToString (), new SubjectInfo(SubjectCode.HIS_W,	"세계사", "", 31, 50));
-		_dictiopnary.Add (SubjectCode.ECO.ToString (), new SubjectInfo(SubjectCode.ECO,		"경제", "", 32, 50));
+		_dictiopnary.Add (SubjectCode.A_KOR.ToString (), new SubjectInfo(SubjectCode.A_KOR,		"국어", "", 1, 100));
+		_dictiopnary.Add (SubjectCode.A_MAT.ToString (), new SubjectInfo(SubjectCode.A_MAT,		"수학", "", 2, 100));
+		_dictiopnary.Add (SubjectCode.A_ENG.ToString (), new SubjectInfo(SubjectCode.A_ENG,		"영어", "", 3, 100));
+		_dictiopnary.Add (SubjectCode.A_HIS_K.ToString (), new SubjectInfo(SubjectCode.A_HIS_K,	"한국사", "", 4, 50));
+		_dictiopnary.Add (SubjectCode.A_PHY.ToString (), new SubjectInfo(SubjectCode.A_PHY,		"물리", "", 5, 50));
+		_dictiopnary.Add (SubjectCode.A_CHM.ToString (), new SubjectInfo(SubjectCode.A_CHM,		"화학", "", 6, 50));
+		_dictiopnary.Add (SubjectCode.A_BIO.ToString (), new SubjectInfo(SubjectCode.A_BIO,		"생명과학", "", 7, 50));
+		_dictiopnary.Add (SubjectCode.A_GEO.ToString (), new SubjectInfo(SubjectCode.A_GEO,		"지구과학", "", 8, 50));
+		_dictiopnary.Add (SubjectCode.A_NOR.ToString (), new SubjectInfo(SubjectCode.A_NOR,		"일반사회", "", 9, 50));
+		_dictiopnary.Add (SubjectCode.A_MAP.ToString (), new SubjectInfo(SubjectCode.A_MAP,		"지리", "", 10, 50));
+		_dictiopnary.Add (SubjectCode.A_LIF.ToString (), new SubjectInfo(SubjectCode.A_LIF,		"생활과 윤리", "", 11, 50));
 	}
 
 	public	static SubjectInfo Find(string name) {

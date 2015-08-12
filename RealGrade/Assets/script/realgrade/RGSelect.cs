@@ -18,7 +18,9 @@ public class RGSelect : FageStateMachine {
 	}
 
 	void OnEnable() {
-		if (PlayerPrefs.HasKey("subject1")) {
+		textError.gameObject.SetActive(false);
+		int selectedClass = PlayerPrefs.GetInt("selected");
+		if (PlayerPrefs.HasKey(selectedClass.ToString()+"subject1")) {
 			if (PlayerPrefs.HasKey("category")) {
 				int c = PlayerPrefs.GetInt("category");
 				if (c == 1) {
@@ -42,7 +44,7 @@ public class RGSelect : FageStateMachine {
 			}
 
 			for (int i = 1 ; i <= required ; i++) {
-				string str = "subject" + i.ToString();
+				string str = selectedClass.ToString()+"subject" + i.ToString();
 				if (PlayerPrefs.HasKey(str)) {
 					string code = PlayerPrefs.GetString(str);
 					GameObject go = GameObject.FindWithTag(code);
@@ -106,13 +108,16 @@ public class RGSelect : FageStateMachine {
 
 	public	void OnClickNext() {
 		int i = 1;
+		int selectedClass = PlayerPrefs.GetInt("selected");
 		Toggle[] toggles;
-		List<Toggle> selected = new List<Toggle> ();
+		SubjectInfo info;
+		SortedList selected = new SortedList ();
 		toggles = groupEssence.GetComponentsInChildren<Toggle> ();
 		foreach (Toggle toggle in toggles) {
 			if (toggle.isOn) {
-				selected.Add(toggle);
-				PlayerPrefs.SetString("subject" + i.ToString(), toggle.gameObject.name);
+				info = SubjectManager.Find(toggle.gameObject.name);
+				selected.Add(info.priority, info);
+//				PlayerPrefs.SetString(selectedClass.ToString()+"subject" + i.ToString(), toggle.gameObject.name);
 				i++;
 			}
 		}
@@ -120,8 +125,10 @@ public class RGSelect : FageStateMachine {
 		toggles = groupHidden.GetComponentsInChildren<Toggle> ();
 		foreach (Toggle toggle in toggles) {
 			if (toggle.isOn) {
-				selected.Add(toggle);
-				PlayerPrefs.SetString("subject" + i.ToString(), toggle.gameObject.name);
+				info = SubjectManager.Find(toggle.gameObject.name);
+				selected.Add(info.priority, info);
+//				selected.Add(toggle);
+//				PlayerPrefs.SetString(selectedClass.ToString()+"subject" + i.ToString(), toggle.gameObject.name);
 				i++;
 			}
 		}
@@ -133,20 +140,33 @@ public class RGSelect : FageStateMachine {
 		}
 		foreach (Toggle toggle in toggles) {
 			if (toggle.isOn) {
-				selected.Add(toggle);
-				PlayerPrefs.SetString("subject" + i.ToString(), toggle.gameObject.name);
+				info = SubjectManager.Find(toggle.gameObject.name);
+				selected.Add(info.priority, info);
+//				selected.Add(toggle);
+//				PlayerPrefs.SetString(selectedClass.ToString()+"subject" + i.ToString(), toggle.gameObject.name);
 				i++;
 			}
 		}
 
-		string str = "subject"+i.ToString();
-		if (PlayerPrefs.HasKey(str)) {
-			PlayerPrefs.DeleteKey(str);
-		}
+//		string str = selectedClass.ToString()+"subject"+i.ToString();
+//		if (PlayerPrefs.HasKey(str)) {
+//			PlayerPrefs.DeleteKey(str);
+//		}
 
 		if (selected.Count != required) {
 			textError.gameObject.SetActive(true);
 			return;
+		} else {
+			int k = 0;
+			for (k = 0 ; k < selected.Count ; k++) {
+				info = selected.GetByIndex(k) as SubjectInfo;
+				PlayerPrefs.SetString(selectedClass.ToString()+"subject" + (k+1).ToString(), info.subject.ToString());
+			}
+
+			string str = selectedClass.ToString()+"subject"+(required+1).ToString();
+			if (PlayerPrefs.HasKey(str)) {
+				PlayerPrefs.DeleteKey(str);
+			}
 		}
 
 		DispatchEvent (new FageEvent (UIChanger.CHANGE, new UIChangerReqeust(RGUI.INPUT)));

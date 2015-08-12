@@ -20,15 +20,15 @@ public class RGUpdateRequest : FageState {
 		FageEventDispatcher.AddEventListener (FageEvent.WEB_RESPONSE, onResponse);
 		FageEventDispatcher.AddEventListener (FageEvent.SENSOR_OFFLINE, OnOffline);
 
-		int selected = PlayerPrefs.GetInt("selected");
-		string url = PlayerPrefs.GetString("url"+selected.ToString());
+		int selectedClass = PlayerPrefs.GetInt("selected");
+		string url = PlayerPrefs.GetString("url"+selectedClass.ToString());
 		FageWebRequest request = new FageWebRequest ("RGUpdateRequest", url);
 		FageEventDispatcher.DispatchEvent (new FageEvent(FageEvent.WEB_REQUEST, request));
 
 		// for analytics
 		FageAnalytics.LogClassEvent(3);
 		for (int i = 1 ; i < 5 ; i++) {
-			string code = PlayerPrefs.GetString("subject" + i.ToString());
+			string code = PlayerPrefs.GetString(selectedClass.ToString()+"subject" + i.ToString());
 			SubjectInfo info = SubjectManager.Find(code);
 			int score = PlayerPrefs.GetInt(code);
 			FageAnalytics.LogSubjectScoreEvent(info.name, score);
