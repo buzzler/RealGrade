@@ -34,7 +34,7 @@ public class RGUpdateCalculate : FageState {
 				int score = PlayerPrefs.GetInt (code);
 				SubjectInfo info = SubjectManager.Find (code);
 
-				PlayerPrefs.SetInt ("grade" + i.ToString (), info.GetGradeEncode (score));
+				PlayerPrefs.SetString("grade" + i.ToString(), info.GetGradeEncode(score));
 			}
 
 			fsm.ReserveState ("RGUpdateDone");

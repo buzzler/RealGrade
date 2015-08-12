@@ -29,7 +29,7 @@ public class RGResult : FageEventDispatcher {
 			
 			string code = PlayerPrefs.GetString(selectedClass.ToString()+"subject"+i.ToString());
 			SubjectInfo info = SubjectManager.Find(code);
-			item.SetData (info, PlayerPrefs.GetInt ("grade" + i.ToString ()), colorFirst, colorOther);
+			item.SetData (info, PlayerPrefs.GetString ("grade" + i.ToString ()), colorFirst, colorOther);
 		}
 
 	}

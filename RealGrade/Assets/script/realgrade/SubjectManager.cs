@@ -120,16 +120,15 @@ public	class SubjectInfo {
 		}
 	}
 
-	public	int GetGradeEncode(int score) {
+	public	string GetGradeEncode(int score) {
 		int avr = GetGradeAvr (score);
 		int[] grades = GetGrades (score);
 
-		float result = (float)avr * Mathf.Pow (10f, (float)PROVIDER);
-		for (int i = 0; i < PROVIDER; i++) {
-			result += (float)grades [i] * Mathf.Pow (10f, (float)(PROVIDER - (float)i - 1f));
+		string str = avr.ToString ();
+		foreach (int j in grades) {
+			str += j.ToString();
 		}
-
-		return (int)result;
+		return str;
 	}
 
 	public	int GetGradeAvr(int score) {
