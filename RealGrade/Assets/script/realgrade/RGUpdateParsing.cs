@@ -26,8 +26,8 @@ public class RGUpdateParsing : FageState {
 
 		int selected = PlayerPrefs.GetInt("selected");
 		int total = GodRoot.instance.subjectGroups[selected-1].GetSubjectCount();
-
 		string[] lines = _raw.Replace ("\r\n", "\n").Replace ("\r", "\n").Split ("\n" [0]);
+		total = Mathf.Min(total,(int)((float)lines.Length / 9f));
 		for (int i = 0 ; i < total ; i++) {
 			string code = lines[i*9];
 			SubjectInfo info = SubjectManager.Find(code);

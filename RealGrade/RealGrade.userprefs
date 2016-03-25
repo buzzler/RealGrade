@@ -1,6 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../JellyCraft/sources/JellyCraft/Assets/Bundle/Script/Galeery/GalleryScreen.cs">
+    <Files>
+      <File FileName="../../JellyCraft/sources/JellyCraft/Assets/Bundle/Script/Galeery/GalleryScreen.cs" Line="30" Column="65" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

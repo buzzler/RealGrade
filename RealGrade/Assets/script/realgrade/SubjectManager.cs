@@ -98,6 +98,9 @@ public	class SubjectInfo {
 		_cuts = new string[GRADES][];
 		for (int i = 0 ; i < GRADES ; i++) {
 			_cuts[i] = new string[PROVIDER];
+			for (int j = 0 ; j < PROVIDER ; j++) {
+				_cuts[i][j] = "-";
+			}
 		}
 	}
 
@@ -146,6 +149,9 @@ public	class SubjectInfo {
 			avr [i] = sum / count;
 		}
 
+		if (avr[0] < 1f) {
+			return 0;
+		}
 		for (int i = 0; i < GRADES; i++) {
 			if ((float)score >= avr [i]) {
 				return i + 1;
