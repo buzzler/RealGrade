@@ -1,9 +1,26 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../JellyCraft/sources/JellyCraft/Assets/Bundle/Script/Galeery/GalleryScreen.cs">
-    <Files>
-      <File FileName="../../JellyCraft/sources/JellyCraft/Assets/Bundle/Script/Galeery/GalleryScreen.cs" Line="30" Column="65" />
-    </Files>
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RealGrade" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="script" expanded="True">
+                <Node name="realgrade" expanded="True">
+                  <Node name="RGSplash.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="RealGrade" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
