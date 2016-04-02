@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FageAnalytics : FageEventDispatcher {
 	private	static FageAnalytics _this;
-	public	GoogleAnalyticsV3 google;
+	public	GoogleAnalyticsV4 google;
 
 	public	const string CATEGORY_CLASS		= "Class";
 	public	const string CATEGORY_SUBJECT	= "Subject";
