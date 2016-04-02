@@ -1882,7 +1882,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &190499411 stripped
@@ -2267,7 +2280,20 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &212561515 stripped
@@ -4031,7 +4057,12 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &392614852 stripped
@@ -6174,7 +6205,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11440748, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9533368, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &526986854 stripped
@@ -6952,7 +6996,20 @@ Prefab:
       propertyPath: m_Color.b
       value: .545098066
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &600366188 stripped
@@ -8229,7 +8286,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &714269491 stripped
@@ -8471,7 +8541,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &738660359
@@ -8618,7 +8701,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11440748, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9533368, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &738660360 stripped
@@ -10914,7 +11010,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8265676, guid: d106e442d0b512d4f8abab8bbef9880b, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265676, guid: d106e442d0b512d4f8abab8bbef9880b, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429772, guid: d106e442d0b512d4f8abab8bbef9880b, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9503910, guid: d106e442d0b512d4f8abab8bbef9880b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d106e442d0b512d4f8abab8bbef9880b, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &889228352 stripped
@@ -11252,7 +11361,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8280166, guid: b70ef47c37ab6634ea2340ee53b13818, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280166, guid: b70ef47c37ab6634ea2340ee53b13818, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455872, guid: b70ef47c37ab6634ea2340ee53b13818, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9564010, guid: b70ef47c37ab6634ea2340ee53b13818, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b70ef47c37ab6634ea2340ee53b13818, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &913935181 stripped
@@ -12660,7 +12782,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440748, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9533368, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1048735444 stripped
@@ -12971,7 +13106,20 @@ Prefab:
       propertyPath: m_Color.b
       value: .588235319
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1067452486 stripped
@@ -13355,7 +13503,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1113146624
@@ -14626,7 +14787,12 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1167293950 stripped
@@ -15180,7 +15346,20 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1219265140 stripped
@@ -15478,7 +15657,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11440748, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9533368, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1236593308
@@ -17794,7 +17986,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1378528185 stripped
@@ -18498,7 +18703,20 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1501687825 stripped
@@ -18719,7 +18937,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440748, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9533368, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1506415662
@@ -21755,7 +21986,20 @@ Prefab:
       propertyPath: m_Color.b
       value: .407843173
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1795926823 stripped
@@ -21879,7 +22123,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11416812, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209716, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9593264, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fc778bc60aa3a645bd1d4a787b1efc8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1808422368
@@ -24390,7 +24647,20 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299950, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440748, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9533368, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 69ffab8e270a4db4f9d0f1277827381e, type: 2}
   m_IsPrefabParent: 0
 --- !u!224 &1940920825 stripped
